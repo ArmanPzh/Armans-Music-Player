@@ -1,5 +1,6 @@
 fetch: https://api.jamendo.com/v3.0/tracks/?client_id=a0d1251f&format=json&limit=all&search={SEARCH_KEYWORD}
 no search fetch for home page: https://api.jamendo.com/v3.0/tracks/?client_id=a0d1251f&format=json&limit=all
+playlists fetch: https://api.jamendo.com/v3.0/playlists/?client_id=a0d1251f&format=json&limit=all
 
 client id : a0d1251f
 
@@ -40,3 +41,7 @@ must have 7 js functionalities including:
     slider - my own carousel
 
 must be responsive down to 300px
+
+
+
+ideas:

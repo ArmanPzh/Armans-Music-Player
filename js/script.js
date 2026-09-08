@@ -1,5 +1,5 @@
 'use strict'
-import {carousel} from "./carousel.js";
+import carousel from "./carousel.js";
 
 carousel();
 
@@ -11,4 +11,4 @@ hamburger.addEventListener("click", () => {
 });
 
 
-// TODO: FIX THE BUG WHERE THE WHOLE PAGE IS JUST THE CAROUSEL AND THE NAVBAR, AND THE REST OF THE PAGE IS NOT VISIBLE.
+// TODO: FIX THE BUG WHERE THE CAROUSEL IS NOT RESPONSIVE AND DOES NOT SCALE PROPERLY ON DIFFERENT SCREEN SIZES.

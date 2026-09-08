@@ -45,9 +45,19 @@ p {
 button {
     border: none;
     color: var(--text-color);
+    background-color: var(--primary-color);
     padding: 8px;
     cursor: pointer;
     border-radius: var(--border-radius);
+}
+
+button:hover {
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+
+    i {
+        color: var(--secondary-color);
+    }
 }
 
 .green-button {
@@ -106,8 +116,13 @@ header>nav>ul>li>a:hover {
     cursor: pointer;
     background-color: var(--text-color);
     color: var(--secondary-color);
-    opacity: 0.8;
     transition: 0.15s ease-in-out;
+}
+
+
+main>h2 {
+    text-align: center;
+    margin: 32px 0 16px;
 }
 
 @media (max-width: 835px) {
@@ -135,7 +150,7 @@ header>nav>ul>li>a:hover {
         display: none;
     }
 
-    nav > ul{
+    nav>ul {
         width: 150px;
     }
 
