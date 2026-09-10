@@ -1,7 +1,6 @@
 'use strict'
-import getData from "./getData.js"
+import songs from "./getData.js"
 export default async function carousel() {
-    const songs = await getData();
     const randomSongs = [...songs]
         .sort(() => Math.random() - 0.5)
         .slice(0, 6);

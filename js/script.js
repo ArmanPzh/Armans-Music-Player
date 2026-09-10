@@ -1,7 +1,9 @@
 'use strict'
 import carousel from "./carousel.js";
+import musicPlayer from "./musicPlayer.js";
 
 carousel();
+musicPlayer();
 
 const hamburger = document.querySelector("#hamburger");
 const navUlEl = document.querySelector("header > nav > ul");

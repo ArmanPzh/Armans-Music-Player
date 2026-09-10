@@ -1,2 +1,9 @@
+'use strict'
+import songs from "./getData.js"
 const player = document.createElement('audio')
-player.setAttribute("s")
+// player.setAttribute(`src="${}"`)
+
+export default function musicPlayer() {
+    console.log(songs);
+
+}
