@@ -69,9 +69,10 @@ button:hover {
 }
 
 
+
 body {
     background-color: var(--background-color);
-
+    padding-bottom: 100px;
 }
 html::-webkit-scrollbar {
     display: none;
@@ -136,6 +137,7 @@ main>h2 {
     width: 50svw;
     height: 48px;
     background-color: var(--text-color);
+    box-shadow: 0 10px 20px var(--primary-color);
     border-radius: var(--border-radius);
     overflow: hidden;
     display: flex;
@@ -176,7 +178,6 @@ main>h2 {
     }
 }
 
-
 .search-result-container {
     width: 100%;
     padding: 0 64px;
@@ -188,10 +189,24 @@ main>h2 {
         img {
             width: 100%;
             object-fit: cover;
+        box-shadow: 0 10px 12px var(--primary-color);
         };
     }
 }
 
+
+.player-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+  background-color: var(--primary-color);
+}
 
 
 @media (max-width: 835px) {
@@ -252,16 +267,20 @@ main>h2 {
         flex-direction: column;
         .search-result-element {
             width: 100%;
+            padding-right: 0;
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: flex-start;
             gap: 4px;
-        overflow: hidden;
+            /* overflow: hidden; */
             img {
                 width: 40px;
+            box-shadow: none;
             }
         }
+    }
+    footer p {
+        font-size: .7rem;
     }
 }
 
@@ -270,5 +289,8 @@ main>h2 {
 @media (max-width: 400px) {
     header>nav>h1 {
         font-size: 1.2rem;
+    }
+    .search-result-element p {
+        display: none;
     }
 }

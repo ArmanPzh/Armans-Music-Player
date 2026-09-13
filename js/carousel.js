@@ -1,4 +1,6 @@
 import { songs } from "./getData.js";
+import musicPlayer from "./musicPlayer.js";
+import downloadSong from "./downloadSong.js"
 
 const carouselContainer = document.querySelector(".carousel-container");
 
@@ -10,11 +12,12 @@ export default async function carousel() {
   carousel.innerHTML = randomSongs
     .map(
       (song) => `
-    <div class="item" style="background-image: url('${song.image}');">
+    <div class="item" data-id="${song.id}" style="background-image: url('${song.image}');">
         <div class="content">
             <div class="name">${song.name}</div>
             <div class="artist">by ${song.artist_name}</div>
-            <button>Play Now</button>
+            <button class="button play-btn">Play Now</button>
+            <button class="button download-btn"><i class='bx bxs-download'></i></button>
         </div>
     </div>
 `,
@@ -22,6 +25,15 @@ export default async function carousel() {
     .join("");
 
   carouselContainer.replaceChildren(carousel);
+
+  carousel.addEventListener("click", (e) => {
+    const item = e.target.closest(".item");
+    if (!item) return;
+    const song = randomSongs.find((s) => s.id === item.dataset.id);
+
+    if (e.target.closest(".play-btn")) musicPlayer(song);
+    if (e.target.closest(".download-btn")) downloadSong(song);
+  });
 
   const buttons = document.createElement("div");
   buttons.className = "buttons";
