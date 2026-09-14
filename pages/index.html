@@ -7,9 +7,9 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="icon" href="assets/images/logo.svg" />
-    <link href="css/carousel.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="../assets/images/logo.svg" />
+    <link href="../css/carousel.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Arman's Music Player</title>
   </head>
 
@@ -32,6 +32,12 @@
       <h2>Check out these Songs!</h2>
       <section class="carousel-container"></section>
 
+      <section class="explore">
+        <h2>Explore:</h2>
+        <a id="explore-artists" target="_blank" href="artists.html"><button>Artists <i class='bx bx-right-arrow-alt'></i></button></a>
+        <a id="explore-playlists" target="_blank" href="playlists.html"><button>Playlists <i class='bx bx-right-arrow-alt'></i></button></a>
+      </section>
+
       <form class="sreach-container" id="search-container">
         <input
           type="search"
@@ -40,19 +46,16 @@
           placeholder="Search by Song Name or Artist"
         />
         <button type="submit">
-          <i class='bx bx-search'></i>
+          <i class="bx bx-search"></i>
         </button>
       </form>
       <section class="search-result-container"></section>
-
-
-
     </main>
 
     <footer id="footer">
       <p>&copy; 2026 Arman's Music Player. All rights reserved.</p>
     </footer>
 
-    <script type="module" src="js/script.js"></script>
+    <script type="module" src="../js/script.js"></script>
   </body>
 </html>
